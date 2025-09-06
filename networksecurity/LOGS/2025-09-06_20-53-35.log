@@ -1,0 +1,20 @@
+2025-09-06 20:53:39,195-root-INFO-Entered the data ingestion method or component
+2025-09-06 20:53:39,343-root-INFO-Connected to MongoDB successfully
+2025-09-06 20:53:40,231-root-INFO-Fetched 1353 records from MongoDB
+2025-09-06 20:53:40,243-root-INFO-Train-test split initiated
+2025-09-06 20:53:40,257-root-INFO-Ingestion of the data is completed
+2025-09-06 20:53:40,290-root-INFO-Read train and test data completed
+2025-09-06 20:53:40,291-root-INFO-Obtaining preprocessing object
+2025-09-06 20:53:40,291-root-INFO-Numerical columns: ['SFH', 'popUpWidnow', 'SSLfinal_State', 'Request_URL', 'URL_of_Anchor', 'web_traffic', 'URL_Length', 'age_of_domain', 'having_IP_Address']
+2025-09-06 20:53:40,305-root-INFO-Applying preprocessing object on training & testing dataframes
+2025-09-06 20:53:40,322-root-INFO-Data transformation completed successfully
+2025-09-06 20:53:40,322-root-INFO-Splitting training and test input data
+2025-09-06 20:53:40,323-root-INFO-Training Random Forest with params: {'n_estimators': [50, 100, 200]}
+2025-09-06 20:53:43,829-root-INFO-Random Forest Accuracy: 0.8856
+2025-09-06 20:53:43,829-root-INFO-Training Decision Tree with params: {'criterion': ['gini', 'entropy'], 'max_depth': [5, 10, None]}
+2025-09-06 20:53:43,924-root-INFO-Decision Tree Accuracy: 0.8819
+2025-09-06 20:53:43,924-root-INFO-Training Gradient Boosting with params: {'learning_rate': [0.1, 0.05], 'n_estimators': [100, 200]}
+2025-09-06 20:53:58,338-root-INFO-Gradient Boosting Accuracy: 0.9188
+2025-09-06 20:53:58,339-root-INFO-Training Logistic Regression with params: {'C': [0.1, 1, 10]}
+2025-09-06 20:53:58,482-root-INFO-Logistic Regression Accuracy: 0.8413
+2025-09-06 20:53:58,482-root-INFO-Training XGBClassifier with params: {'learning_rate': [0.1, 0.05], 'n_estimators': [100, 200]}

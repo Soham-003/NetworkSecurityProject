@@ -1,0 +1,12 @@
+2025-09-06 20:50:20,992-root-INFO-Entered the data ingestion method or component
+2025-09-06 20:50:21,151-root-INFO-Connected to MongoDB successfully
+2025-09-06 20:50:21,869-root-INFO-Fetched 1353 records from MongoDB
+2025-09-06 20:50:21,880-root-INFO-Train-test split initiated
+2025-09-06 20:50:21,892-root-INFO-Ingestion of the data is completed
+2025-09-06 20:50:21,925-root-INFO-Read train and test data completed
+2025-09-06 20:50:21,926-root-INFO-Obtaining preprocessing object
+2025-09-06 20:50:21,926-root-INFO-Numerical columns: ['SFH', 'popUpWidnow', 'SSLfinal_State', 'Request_URL', 'URL_of_Anchor', 'web_traffic', 'URL_Length', 'age_of_domain', 'having_IP_Address']
+2025-09-06 20:50:21,940-root-INFO-Applying preprocessing object on training & testing dataframes
+2025-09-06 20:50:21,963-root-INFO-Data transformation completed successfully
+2025-09-06 20:50:21,964-root-INFO-Splitting training and test input data
+2025-09-06 20:50:21,965-root-INFO-Training Random Forest with params: {'n_estimators': [50, 100, 200]}

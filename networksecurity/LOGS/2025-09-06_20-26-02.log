@@ -1,0 +1,4 @@
+2025-09-06 20:26:19,314-root-INFO-Entered the data ingestion method or component
+2025-09-06 20:26:19,746-root-INFO-Connected to MongoDB successfully
+2025-09-06 20:26:20,317-root-INFO-Fetched 0 records from MongoDB
+2025-09-06 20:26:20,325-root-INFO-Train-test split initiated

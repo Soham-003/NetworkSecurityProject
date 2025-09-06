@@ -1,0 +1,5 @@
+2025-09-06 20:34:15,033-root-INFO-Entered the data ingestion method or component
+2025-09-06 20:34:15,325-root-INFO-Connected to MongoDB successfully
+2025-09-06 20:34:16,050-root-INFO-Fetched 1353 records from MongoDB
+2025-09-06 20:34:16,065-root-INFO-Train-test split initiated
+2025-09-06 20:34:16,096-root-INFO-Ingestion of the data is completed

@@ -7,7 +7,10 @@ seaborn
 pymongo
 certifi
 pymongo[srv]==3.12
-
+dill
+xgboost
+catboost
+flask
 
 
 #-e.
