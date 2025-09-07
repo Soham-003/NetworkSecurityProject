@@ -63,6 +63,13 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+      - name: Clean Docker system
+        run: |
+          docker system prune -a -f
+          docker volume prune -f
+      - name: Stop and remove existing container
+        run: |
+          docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity || true
       - name: Pull latest images
         run: |
             docker pull ${{ steps.login-ecr.outputs.registry }}/networksecurity:latest
