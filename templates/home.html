@@ -11,117 +11,170 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
     }
     .card {
       border-radius: 20px;
-      padding: 25px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 600px;
+      width: 100%;
     }
     .form-label {
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #333;
     }
     h2 {
+      font-weight: 800;
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+    .btn-success {
       font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px 0;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-success:hover {
+      background-color: #0b5ed7;
+    }
+    .alert {
+      border-radius: 15px;
+      font-size: 1.2rem;
+      padding: 15px 20px;
+      max-width: 400px;
+      margin: 20px auto 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .text-success {
+      color: #198754 !important;
+    }
+    .text-danger {
+      color: #dc3545 !important;
+    }
+    .text-warning {
+      color: #ffc107 !important;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="card shadow-lg">
-      <h2 class="text-center text-primary mb-4">🔎 Website Feature Input</h2>
-      <form action="/predictdata" method="POST">
+    <div class="card bg-white shadow-lg">
+      <h2 class="text-center">🔎 Website Feature Input</h2>
+      <form action="/predictdata" method="POST" novalidate>
         
-        <!-- Loop not used so we can control ranges & dropdowns -->
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label class="form-label">SFH</label>
-            <select class="form-select" name="SFH" required>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="SFH">SFH</label>
+            <select class="form-select" id="SFH" name="SFH" required>
+              <option value="" disabled selected>Select SFH</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
           
-          <div class="col-md-6 mb-3">
-            <label class="form-label">PopUp Window</label>
-            <select class="form-select" name="popUpWidnow" required>
+          <div class="col-md-6">
+            <label class="form-label" for="popUpWidnow">PopUp Window</label>
+            <select class="form-select" id="popUpWidnow" name="popUpWidnow" required>
+              <option value="" disabled selected>Select PopUp Window</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">SSL Final State</label>
-            <select class="form-select" name="SSLfinal_State" required>
+          <div class="col-md-6">
+            <label class="form-label" for="SSLfinal_State">SSL Final State</label>
+            <select class="form-select" id="SSLfinal_State" name="SSLfinal_State" required>
+              <option value="" disabled selected>Select SSL Final State</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">Request URL</label>
-            <select class="form-select" name="Request_URL" required>
+          <div class="col-md-6">
+            <label class="form-label" for="Request_URL">Request URL</label>
+            <select class="form-select" id="Request_URL" name="Request_URL" required>
+              <option value="" disabled selected>Select Request URL</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">URL of Anchor</label>
-            <select class="form-select" name="URL_of_Anchor" required>
+          <div class="col-md-6">
+            <label class="form-label" for="URL_of_Anchor">URL of Anchor</label>
+            <select class="form-select" id="URL_of_Anchor" name="URL_of_Anchor" required>
+              <option value="" disabled selected>Select URL of Anchor</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">Web Traffic</label>
-            <select class="form-select" name="web_traffic" required>
+          <div class="col-md-6">
+            <label class="form-label" for="web_traffic">Web Traffic</label>
+            <select class="form-select" id="web_traffic" name="web_traffic" required>
+              <option value="" disabled selected>Select Web Traffic</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">URL Length</label>
-            <select class="form-select" name="URL_Length" required>
+          <div class="col-md-6">
+            <label class="form-label" for="URL_Length">URL Length</label>
+            <select class="form-select" id="URL_Length" name="URL_Length" required>
+              <option value="" disabled selected>Select URL Length</option>
               <option value="-1">-1</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">Age of Domain</label>
-            <select class="form-select" name="age_of_domain" required>
+          <div class="col-md-6">
+            <label class="form-label" for="age_of_domain">Age of Domain</label>
+            <select class="form-select" id="age_of_domain" name="age_of_domain" required>
+              <option value="" disabled selected>Select Age of Domain</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
 
-          <div class="col-md-6 mb-3">
-            <label class="form-label">Having IP Address</label>
-            <select class="form-select" name="having_IP_Address" required>
+          <div class="col-md-6">
+            <label class="form-label" for="having_IP_Address">Having IP Address</label>
+            <select class="form-select" id="having_IP_Address" name="having_IP_Address" required>
+              <option value="" disabled selected>Select Having IP Address</option>
               <option value="0">0</option>
               <option value="1">1</option>
             </select>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success w-100">🚀 Predict</button>
+        <button type="submit" class="btn btn-success w-100 mt-4">🚀 Predict</button>
       </form>
 
       {% if results is not none %}
-      <div class="alert alert-info mt-4 text-center">
+      <div class="alert alert-info mt-4 text-center rounded-4 shadow-sm">
         <h4>Prediction:</h4>
         {% if results == 1 %}
-          <span class="text-success fw-bold">✅ Legitimate Website</span>
+          <span class="text-success fw-bold fs-5">✅ Legitimate Website</span>
+        {% elif results == -1 %}
+          <span class="text-danger fw-bold fs-5">⚠️ Phishing Website</span>
         {% else %}
-          <span class="text-warning fw-bold">⚠️ Phishing Website</span>
+          <span class="text-warning fw-bold fs-5">❓ Suspicious Website</span>
         {% endif %}
       </div>
       {% endif %}

@@ -35,7 +35,13 @@ def predict_datapoint():
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
 
-        prediction = "🚨 Malicious Website" if results[0] == 1 else "✅ Safe Website"
+        # Map predictions to meaningful labels
+        if results[0] == 1:
+            prediction = 1  # Legitimate
+        elif results[0] == -1:
+            prediction = -1  # Phishing
+        else:
+            prediction = 0  # Suspicious
 
         return render_template('home.html', results=prediction)
 

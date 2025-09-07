@@ -3,7 +3,7 @@ import sys
 from dataclasses import dataclass
 
 from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 
@@ -33,12 +33,14 @@ class ModelTrainer:
 
             # Use a single best model
             logging.info("Training Gradient Boosting Classifier")
-            model = LogisticRegression()
+            model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
             model.fit(X_train, y_train)
 
             y_pred = model.predict(X_test)
             accuracy = accuracy_score(y_test, y_pred)
             logging.info(f"Model Accuracy: {accuracy:.4f}")
+            logging.info(f"Classification Report:\n{classification_report(y_test, y_pred)}")
+            logging.info(f"Confusion Matrix:\n{confusion_matrix(y_test, y_pred)}")
 
             if accuracy < 0.6:
                 raise CustomException("Model accuracy is less than 0.6. Not acceptable.")
